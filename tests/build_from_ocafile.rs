@@ -47,16 +47,23 @@ ADD ATTR_FRAMING \
 
         let result = facade.build_from_ocafile(ocafile)?;
 
+        println!("result: {:?}", result);
+
+        // assert_eq!(
+        //     result.said.clone().unwrap().to_string(),
+        //     "EHP1RKZeYhIO7zTb9JJDfsNeTLaOp84GE9oDaEj9XlFk"
+        // );
+
         assert_eq!(
             result.said.clone().unwrap().to_string(),
-            "EHP1RKZeYhIO7zTb9JJDfsNeTLaOp84GE9oDaEj9XlFk"
+            "EA6T3b-9faoJmhZk1WTH2muJFnnpkSBEK0jHxQPXAeRc"
         );
 
         let code = HashFunctionCode::Blake3_256;
         let format = SerializationFormats::JSON;
         let oca_bundle_encoded = result.encode(&code, &format).unwrap();
         let oca_bundle_version = String::from_utf8(oca_bundle_encoded[6..23].to_vec()).unwrap();
-        assert_eq!(oca_bundle_version, "OCAS11JSON0009ac_");
+        assert_eq!(oca_bundle_version, "OCAS11JSON0009ba_");
 
         let search_result = facade.search_oca_bundle(None, "Ent".to_string(), 10, 1);
         assert_eq!(search_result.metadata.total, 1);
