@@ -275,7 +275,7 @@ impl TransformationAST {
     pub fn new() -> Self {
         TransformationAST {
             // Version of OCA specification
-            version: String::from("1.0.0"),
+            version: String::from("1.0.2"),
             commands: Vec::new(),
             commands_meta: IndexMap::new(),
             meta: HashMap::new(),
@@ -363,7 +363,7 @@ mod tests {
         let serialized = serde_json::to_string(&ast).unwrap();
         assert_eq!(
             serialized,
-            r#"{"version":"1.0.0","commands":[{"type":"Rename","object_kind":"Rename","content":{"attributes":{"digest":"d"}}}],"commands_meta":{},"meta":{}}"#
+            r#"{"version":"1.0.2","commands":[{"type":"Rename","object_kind":"Rename","content":{"attributes":{"digest":"d"}}}],"commands_meta":{},"meta":{}}"#
         );
 
         let deser: TransformationAST = serde_json::from_str(&serialized).unwrap();

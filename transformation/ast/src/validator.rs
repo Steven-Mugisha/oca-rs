@@ -25,8 +25,8 @@ impl Validator for OCAValidator {
         let mut errors = Vec::new();
         let mut valid = true;
         match ast.version.as_str() {
-            "1.0.0" => {
-                let version_validator = validate_1_0_0(ast, command);
+            "1.0.2" => {
+                let version_validator = validate_1_0_2(ast, command);
                 if version_validator.is_err() {
                     valid = false;
                     errors.push(version_validator.err().unwrap());
@@ -49,7 +49,7 @@ impl Validator for OCAValidator {
     }
 }
 
-fn validate_1_0_0(_ast: &TransformationAST, _command: Command) -> Result<bool, Error> {
+fn validate_1_0_2(_ast: &TransformationAST, _command: Command) -> Result<bool, Error> {
     // Rules
     // Cannot remove if does not exist on stack
     // Cannot modify if does not exist on stack

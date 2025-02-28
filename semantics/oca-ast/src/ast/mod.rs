@@ -165,32 +165,32 @@ impl Serialize for OverlayType {
         S: Serializer,
     {
         match self {
-            OverlayType::Label => serializer.serialize_str("spec/overlays/label/1.0"),
-            OverlayType::Information => serializer.serialize_str("spec/overlays/information/1.0"),
-            OverlayType::Encoding => serializer.serialize_str("spec/overlays/encoding/1.0"),
+            OverlayType::Label => serializer.serialize_str("spec/overlays/label/1.0.2"),
+            OverlayType::Information => serializer.serialize_str("spec/overlays/information/1.0.2"),
+            OverlayType::Encoding => serializer.serialize_str("spec/overlays/encoding/1.0.2"),
             OverlayType::CharacterEncoding => {
-                serializer.serialize_str("spec/overlays/character_encoding/1.0")
+                serializer.serialize_str("spec/overlays/character_encoding/1.0.2")
             }
-            OverlayType::Format => serializer.serialize_str("spec/overlays/format/1.0"),
-            OverlayType::Meta => serializer.serialize_str("spec/overlays/meta/1.0"),
-            OverlayType::Standard => serializer.serialize_str("spec/overlays/standard/1.0"),
-            OverlayType::Cardinality => serializer.serialize_str("spec/overlays/cardinality/1.0"),
-            OverlayType::Conditional => serializer.serialize_str("spec/overlays/conditional/1.0"),
-            OverlayType::Conformance => serializer.serialize_str("spec/overlays/conformance/1.0"),
-            OverlayType::EntryCode => serializer.serialize_str("spec/overlays/entry_code/1.0"),
-            OverlayType::Entry => serializer.serialize_str("spec/overlays/entry/1.0"),
-            OverlayType::Unit => serializer.serialize_str("spec/overlays/unit/1.0"),
-            OverlayType::AttributeMapping => serializer.serialize_str("spec/overlays/mapping/1.0"),
+            OverlayType::Format => serializer.serialize_str("spec/overlays/format/1.0.2"),
+            OverlayType::Meta => serializer.serialize_str("spec/overlays/meta/1.0.2"),
+            OverlayType::Standard => serializer.serialize_str("spec/overlays/standard/1.0.2"),
+            OverlayType::Cardinality => serializer.serialize_str("spec/overlays/cardinality/1.0.2"),
+            OverlayType::Conditional => serializer.serialize_str("spec/overlays/conditional/1.0.2"),
+            OverlayType::Conformance => serializer.serialize_str("spec/overlays/conformance/1.0.2"),
+            OverlayType::EntryCode => serializer.serialize_str("spec/overlays/entry_code/1.0.2"),
+            OverlayType::Entry => serializer.serialize_str("spec/overlays/entry/1.0.2"),
+            OverlayType::Unit => serializer.serialize_str("spec/overlays/unit/1.0.2"),
+            OverlayType::AttributeMapping => serializer.serialize_str("spec/overlays/mapping/1.0.2"),
             OverlayType::EntryCodeMapping => {
-                serializer.serialize_str("spec/overlays/entry_code_mapping/1.0")
+                serializer.serialize_str("spec/overlays/entry_code_mapping/1.0.2")
             }
-            OverlayType::Subset => serializer.serialize_str("spec/overlays/subset/1.0"),
-            OverlayType::UnitMapping => serializer.serialize_str("spec/overlays/unit_mapping/1.0"),
-            OverlayType::Layout => serializer.serialize_str("spec/overlays/layout/1.0"),
-            OverlayType::Sensitivity => serializer.serialize_str("spec/overlays/sensitivity/1.0"),
-            OverlayType::Link => serializer.serialize_str("spec/overlays/link/1.0"),
+            OverlayType::Subset => serializer.serialize_str("spec/overlays/subset/1.0.2"),
+            OverlayType::UnitMapping => serializer.serialize_str("spec/overlays/unit_mapping/1.0.2"),
+            OverlayType::Layout => serializer.serialize_str("spec/overlays/layout/1.0.2"),
+            OverlayType::Sensitivity => serializer.serialize_str("spec/overlays/sensitivity/1.0.2"),
+            OverlayType::Link => serializer.serialize_str("spec/overlays/link/1.0.2"),
             OverlayType::AttributeFraming => {
-                serializer.serialize_str("spec/overlays/attribute_framing/1.0")
+                serializer.serialize_str("spec/overlays/attribute_framing/1.0.2")
             }
         }
     }
@@ -288,27 +288,27 @@ impl<'de> Deserialize<'de> for OverlayType {
     {
         let s = String::deserialize(deserializer)?;
         match s.as_str() {
-            "spec/overlays/label/1.0" => Ok(OverlayType::Label),
-            "spec/overlays/information/1.0" => Ok(OverlayType::Information),
-            "spec/overlays/encoding/1.0" => Ok(OverlayType::Encoding),
-            "spec/overlays/character_encoding/1.0" => Ok(OverlayType::CharacterEncoding),
-            "spec/overlays/format/1.0" => Ok(OverlayType::Format),
-            "spec/overlays/meta/1.0" => Ok(OverlayType::Meta),
-            "spec/overlays/standard/1.0" => Ok(OverlayType::Standard),
-            "spec/overlays/cardinality/1.0" => Ok(OverlayType::Cardinality),
-            "spec/overlays/conditional/1.0" => Ok(OverlayType::Conditional),
-            "spec/overlays/conformance/1.0" => Ok(OverlayType::Conformance),
-            "spec/overlays/entry_code/1.0" => Ok(OverlayType::EntryCode),
-            "spec/overlays/entry/1.0" => Ok(OverlayType::Entry),
-            "spec/overlays/unit/1.0" => Ok(OverlayType::Unit),
-            "spec/overlays/mapping/1.0" => Ok(OverlayType::AttributeMapping),
-            "spec/overlays/entry_code_mapping/1.0" => Ok(OverlayType::EntryCodeMapping),
-            "spec/overlays/subset/1.0" => Ok(OverlayType::Subset),
-            "spec/overlays/unit_mapping/1.0" => Ok(OverlayType::UnitMapping),
-            "spec/overlays/layout/1.0" => Ok(OverlayType::Layout),
-            "spec/overlays/sensitivity/1.0" => Ok(OverlayType::Sensitivity),
-            "spec/overlays/link/1.0" => Ok(OverlayType::Link),
-            "spec/overlays/attribute_framing/1.0" => Ok(OverlayType::AttributeFraming),
+            "spec/overlays/label/1.0.2" => Ok(OverlayType::Label),
+            "spec/overlays/information/1.0.2" => Ok(OverlayType::Information),
+            "spec/overlays/encoding/1.0.2" => Ok(OverlayType::Encoding),
+            "spec/overlays/character_encoding/1.0.2" => Ok(OverlayType::CharacterEncoding),
+            "spec/overlays/format/1.0.2" => Ok(OverlayType::Format),
+            "spec/overlays/meta/1.0.2" => Ok(OverlayType::Meta),
+            "spec/overlays/standard/1.0.2" => Ok(OverlayType::Standard),
+            "spec/overlays/cardinality/1.0.2" => Ok(OverlayType::Cardinality),
+            "spec/overlays/conditional/1.0.2" => Ok(OverlayType::Conditional),
+            "spec/overlays/conformance/1.0.2" => Ok(OverlayType::Conformance),
+            "spec/overlays/entry_code/1.0.2" => Ok(OverlayType::EntryCode),
+            "spec/overlays/entry/1.0.2" => Ok(OverlayType::Entry),
+            "spec/overlays/unit/1.0.2" => Ok(OverlayType::Unit),
+            "spec/overlays/mapping/1.0.2" => Ok(OverlayType::AttributeMapping),
+            "spec/overlays/entry_code_mapping/1.0.2" => Ok(OverlayType::EntryCodeMapping),
+            "spec/overlays/subset/1.0.2" => Ok(OverlayType::Subset),
+            "spec/overlays/unit_mapping/1.0.2" => Ok(OverlayType::UnitMapping),
+            "spec/overlays/layout/1.0.2" => Ok(OverlayType::Layout),
+            "spec/overlays/sensitivity/1.0.2" => Ok(OverlayType::Sensitivity),
+            "spec/overlays/link/1.0.2" => Ok(OverlayType::Link),
+            "spec/overlays/attribute_framing/1.0.2" => Ok(OverlayType::AttributeFraming),
             _ => Err(serde::de::Error::custom(format!(
                 "unknown overlay type: {}",
                 s
@@ -597,7 +597,7 @@ impl OCAAst {
     pub fn new() -> Self {
         OCAAst {
             // Version of OCA specification
-            version: String::from("1.0.0"),
+            version: String::from("1.0.2"),
             commands: Vec::new(),
             commands_meta: IndexMap::new(),
             meta: HashMap::new(),
@@ -1036,7 +1036,7 @@ mod tests {
         let serialized = serde_json::to_string(&ocaast).unwrap();
         assert_eq!(
             serialized,
-            r#"{"version":"1.0.0","commands":[{"type":"Add","object_kind":"CaptureBase","content":{"attributes":{"allowed":["Boolean"],"test":"Text"},"properties":{"test":"test"},"flagged_attributes":["test"]}},{"type":"Add","object_kind":"Label","content":{}}],"commands_meta":{},"meta":{}}"#
+            r#"{"version":"1.0.2","commands":[{"type":"Add","object_kind":"CaptureBase","content":{"attributes":{"allowed":["Boolean"],"test":"Text"},"properties":{"test":"test"},"flagged_attributes":["test"]}},{"type":"Add","object_kind":"Label","content":{}}],"commands_meta":{},"meta":{}}"#
         );
 
         let deser: OCAAst = serde_json::from_str(&serialized).unwrap();
